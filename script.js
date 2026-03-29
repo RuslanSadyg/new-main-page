@@ -43,7 +43,7 @@ document.addEventListener("mousemove", (e) => {
 
 // плавная анимация
 function animate() {
-  const max = 8; // маленький угол = "дорого"
+  const max = 6; // маленький угол = "дорого"
 
   // инерция (чем меньше число — тем плавнее)
   currentX += (targetX - currentX) * 0.08;
