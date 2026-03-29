@@ -20,6 +20,16 @@ body {
   align-items: center;
   justify-content: center;
   padding: 40px;
+
+  background: url("images/flowers.webp") center/cover no-repeat;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65); /* регулируй 0.25–0.45 */
 }
 
 .hero-container {
@@ -29,6 +39,8 @@ body {
   width: 100%;
   max-width: 1200px;
   gap: 80px;
+  position: relative;
+  z-index: 1;
 }
 
 /* LEFT */
@@ -72,6 +84,7 @@ body {
 .hero-right {
   flex: 1;
   max-width: 400px;
+  color: white;
 }
 
 h1 {
@@ -133,8 +146,9 @@ h1 {
 
 /* SECONDARY */
 .btn.secondary {
+  color: white;
   background: transparent;
-  border: 1px solid #171717;
+  border: 1px solid rgba(255, 255, 255, 0.8);
 }
 
 /* STICKY CTA */
