@@ -49,6 +49,7 @@ body {
 
   border-radius: 12px;
   box-shadow: 0 40px 100px rgba(0, 0, 0, 0.6);
+  filter: contrast(0.95);
 }
 
 /* TEXT */
@@ -115,11 +116,15 @@ h1 {
 
   padding: 14px 24px;
 
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(12px);
+  background: rgba(20, 20, 20, 0.55);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 
   transform: translateY(-100%);
-  transition: 0.3s;
+  transition: transform 0.3s ease;
+
   z-index: 9999;
 }
 
@@ -134,6 +139,34 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.sticky-title {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+}
+
+.sticky-sub {
+  font-size: 13px;
+  opacity: 0.7;
+  color: #cccccc;
+}
+
+.sticky-left {
+  line-height: 1.1;
+}
+
+.sticky-cta .btn.primary {
+  background: #f47c5c;
+  color: white;
+
+  box-shadow: 0 0px 25px rgba(244, 124, 92, 0.35);
+}
+
+.sticky-cta .btn.primary:hover {
+  transform: scale(1.04);
 }
 
 /* ================= TRANSFORM ================= */
