@@ -191,7 +191,9 @@ h1 {
 
 .transform {
   padding: 140px 40px;
-  background: rgba(10, 10, 10, 0.9);
+  color: #ffffff;
+
+  background: rgba(15, 15, 15, 0.65);
   backdrop-filter: blur(6px);
 }
 
@@ -202,22 +204,21 @@ h1 {
 }
 
 .transform h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
-  color: #ffffff;
+  font-size: 42px;
+  margin-bottom: 24px;
+  font-weight: 600;
 }
 
 .transform p {
-  font-size: 18px;
-  line-height: 1.6;
+  font-size: 19px;
+  line-height: 1.65;
   opacity: 0.85;
-  margin-bottom: 20px;
 }
 
 .transform .accent {
   font-size: 20px;
-  font-weight: 500;
-  opacity: 1;
+  margin-top: 10px;
+  opacity: 0.95;
 }
 
 /* ABOUT */
@@ -226,6 +227,7 @@ h1 {
   position: relative;
   overflow: hidden;
 }
+
 .about::before {
   content: "";
   position: absolute;
@@ -233,9 +235,16 @@ h1 {
 
   background: url("images/flowers.webp") center / cover no-repeat fixed;
 
-  filter: blur(12px) brightness(0.5);
-  transform: scale(1.1);
+  filter: blur(4px) brightness(0.6);
+  transform: scale(1.05);
 
+  z-index: 0;
+}
+.about::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
   z-index: 0;
 }
 

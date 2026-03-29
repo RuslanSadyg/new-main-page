@@ -1,6 +1,6 @@
 // SCROLL TO SECTION
 document.getElementById("scrollBtn").addEventListener("click", () => {
-  document.getElementById("about").scrollIntoView({
+  document.getElementById("transform").scrollIntoView({
     behavior: "smooth",
   });
 });
