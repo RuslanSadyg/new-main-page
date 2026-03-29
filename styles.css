@@ -194,6 +194,7 @@ h1 {
 
 /* ================= ABOUT ================= */
 .about {
+  color: #ffffff;
   padding: 140px 40px;
   background: rgba(15, 15, 15, 0.65);
 }
@@ -219,6 +220,17 @@ h1 {
 .about-item {
   display: flex;
   gap: 20px;
+}
+
+/* ===== FIX TEXT COLORS ===== */
+
+.about-item h3 {
+  color: #ffffff;
+}
+
+.about-item p {
+  color: #e0e0e0;
+  opacity: 0.8;
 }
 
 .num {
@@ -251,6 +263,18 @@ h1 {
   color: white;
 }
 
+.author-text p {
+  color: #e0e0e0;
+  opacity: 0.85;
+}
+
+.author-text h2 {
+  color: #ffffff;
+}
+
+.author-text .quote {
+  opacity: 0.6;
+}
 .author-image img {
   width: 100%;
   border-radius: 12px;
