@@ -8,7 +8,7 @@
 /* BASE */
 body {
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  background: linear-gradient(180deg, #f5f7c6 0%, #eef1b5 100%);
+  background: linear-gradient(180deg, #f7f8e8 0%, #eef0d2 100%);
   color: #171717;
   overflow-x: hidden;
 }
@@ -56,7 +56,7 @@ body {
   text-align: center;
   font-size: 28px;
   border-radius: 12px;
-  box-shadow: 0 40px 120px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.18);
   transition: transform 0.2s ease;
 }
 
@@ -123,7 +123,7 @@ h1 {
 
 /* PRIMARY */
 .btn.primary {
-  background: #ff8562;
+  background: #f47c5c;
   color: white;
 }
 

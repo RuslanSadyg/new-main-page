@@ -20,13 +20,22 @@ window.addEventListener("scroll", () => {
 const book = document.querySelector(".book-cover");
 
 document.addEventListener("mousemove", (e) => {
-  const x = (e.clientX / window.innerWidth - 0.5) * 2;
-  const y = (e.clientY / window.innerHeight - 0.5) * 2;
+  const rect = book.getBoundingClientRect();
 
-  const max = 12; // ограничение угла
+  const centerX = rect.left + rect.width / 2;
+  const centerY = rect.top + rect.height / 2;
+
+  const x = (e.clientX - centerX) / (rect.width / 2);
+  const y = (e.clientY - centerY) / (rect.height / 2);
+
+  const max = 12;
 
   book.style.transform = `
     rotateY(${x * max}deg)
     rotateX(${-y * max}deg)
   `;
+});
+
+document.addEventListener("mouseleave", () => {
+  book.style.transform = "rotateY(0deg) rotateX(0deg)";
 });
