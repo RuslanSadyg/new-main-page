@@ -1,0 +1,175 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BASE */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  background: linear-gradient(180deg, #f5f7c6 0%, #eef1b5 100%);
+  color: #171717;
+  overflow-x: hidden;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.hero-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  gap: 80px;
+}
+
+/* LEFT */
+.hero-left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.book {
+  width: 340px;
+  height: 460px;
+  perspective: 1000px;
+}
+
+.book-cover {
+  width: 100%;
+  height: 100%;
+  background: #ff9f85;
+  color: #171717;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 28px;
+  border-radius: 12px;
+  box-shadow: 0 40px 120px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease;
+}
+
+/* RIGHT */
+.hero-right {
+  flex: 1;
+  max-width: 400px;
+}
+
+h1 {
+  font-size: 42px;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.subtitle {
+  font-size: 18px;
+  margin-bottom: 24px;
+  opacity: 0.8;
+}
+
+/* PRICE */
+.price {
+  margin-bottom: 24px;
+}
+
+.price .new {
+  font-size: 28px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.price .old {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+/* BUTTONS */
+.buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.btn {
+  padding: 14px 22px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.2s ease;
+}
+.btn.big {
+  padding: 16px 28px;
+  font-size: 17px;
+}
+
+/* PRIMARY */
+.btn.primary {
+  background: #ff8562;
+  color: white;
+}
+
+.btn.primary:hover {
+  transform: scale(1.05);
+}
+
+/* SECONDARY */
+.btn.secondary {
+  background: transparent;
+  border: 1px solid #171717;
+}
+
+/* STICKY CTA */
+.sticky-cta {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 14px 24px;
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.7);
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+  z-index: 9999;
+}
+
+.sticky-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sticky-text {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+.sticky-cta.show {
+  transform: translateY(0);
+}
+
+.sticky-inner {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ABOUT */
+.about {
+  padding: 120px 40px;
+  background: #171717;
+  color: white;
+}
