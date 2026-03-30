@@ -11,9 +11,10 @@ body {
 
   background:
     radial-gradient(circle at 30% 40%, #054435, transparent 60%),
-    radial-gradient(circle at 70% 60%, #ff907c, transparent 60%), #280b0a;
+    radial-gradient(circle at 70% 60%, #813b2e, transparent 60%), #271111;
 
   overflow-x: hidden;
+  background-attachment: fixed;
 }
 
 /* ================= HERO ================= */
