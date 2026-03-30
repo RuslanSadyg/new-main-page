@@ -7,7 +7,15 @@
 
 /* ================= BASE ================= */
 body {
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  font-weight: 400;
+  color: #e0e0e0;
 
   background:
     radial-gradient(circle at 30% 40%, #054435, transparent 60%),
@@ -15,6 +23,19 @@ body {
 
   overflow-x: hidden;
   background-attachment: fixed;
+}
+
+h1,
+h2,
+h3,
+.sticky-title,
+.about-title,
+.author-text h2 {
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+  color: #ffffff;
 }
 
 /* ================= HERO ================= */
@@ -60,14 +81,30 @@ body {
 }
 
 h1 {
+  font-size: 46px;
+  margin-bottom: 18px;
+}
+
+h2 {
   font-size: 42px;
-  margin-bottom: 16px;
+  margin-bottom: 26px;
+}
+
+h3 {
+  font-size: 23px;
+  margin-bottom: 14px;
 }
 
 .subtitle {
-  font-size: 18px;
-  margin-bottom: 24px;
-  opacity: 0.8;
+  font-size: 18.5px;
+  margin-bottom: 26px;
+  opacity: 0.87;
+}
+
+.accent {
+  font-size: 20.5px;
+  font-weight: 500;
+  margin-top: 26px;
 }
 
 .price {
@@ -88,25 +125,45 @@ h1 {
 /* ================= BUTTONS ================= */
 .buttons {
   display: flex;
-  gap: 12px;
+  gap: 14px;
 }
 
 .btn {
-  padding: 14px 22px;
-  border-radius: 999px;
+  padding: 15px 26px;
+  border-radius: 9999px;
   border: none;
   cursor: pointer;
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  font-size: 16.5px;
+  letter-spacing: 0.3px;
+  transition: all 0.25s ease;
 }
 
 .btn.primary {
   background: #f47c5c;
   color: white;
+  box-shadow: 0 4px 20px rgba(244, 124, 92, 0.4);
+}
+
+.btn.primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 30px rgba(244, 124, 92, 0.55);
+}
+
+.btn.primary.big {
+  padding: 18px 34px;
+  font-size: 17.5px;
 }
 
 .btn.secondary {
   background: transparent;
   color: white;
-  border: 1px solid rgba(255, 255, 255, 0.8);
+  border: 1.5px solid rgba(255, 255, 255, 0.8);
+}
+
+.btn.secondary:hover {
+  background: rgba(255, 255, 255, 0.08);
 }
 
 /* ================= STICKY ================= */
