@@ -502,3 +502,634 @@ h3 {
 .author-text p {
   color: rgba(255, 255, 255, 0.75);
 }
+
+/* ================= FAQ ================= */
+/* ================= FAQ ================= */
+.faq {
+  padding: 120px 40px;
+  background: rgba(15, 15, 15, 0.65);
+}
+
+.faq-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ITEM */
+.faq-item {
+  position: relative;
+  padding: 26px 0;
+}
+
+/* базовая линия */
+.faq-item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* анимируемая линия */
+.faq-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.35);
+  transition: width 0.2s ease;
+}
+
+.faq-item:hover::before {
+  width: 100%;
+}
+
+/* QUESTION */
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: relative;
+  padding-left: 18px;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.2px;
+
+  color: rgba(255, 255, 255, 0.85);
+  transition: color 0.25s ease;
+
+  cursor: pointer;
+}
+
+/* левая линия */
+.faq-question::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+
+  width: 2px;
+  height: 18px;
+
+  transform: translateY(-50%);
+
+  background: rgba(255, 255, 255, 0.25);
+  transition: all 0.25s ease;
+}
+
+/* hover эффекты */
+.faq-item:hover .faq-question {
+  color: #fff;
+}
+
+.faq-item:hover .faq-question span:first-child {
+  transform: translateX(4px);
+  opacity: 0.9;
+}
+
+.faq-item:hover .faq-question::before {
+  height: 24px;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+/* TOGGLE */
+.faq-toggle {
+  font-size: 45px;
+  opacity: 0.6;
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
+
+.faq-toggle::before {
+  content: "+";
+}
+
+.faq-item:hover .faq-toggle {
+  transform: scale(1.15);
+  opacity: 1;
+}
+
+/* ANSWER */
+.faq-answer {
+  height: 0;
+  overflow: hidden;
+
+  margin-top: 0;
+  opacity: 0;
+
+  font-size: 16.5px;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.65);
+
+  transition:
+    height 0.35s ease,
+    opacity 0.25s ease,
+    margin-top 0.35s ease;
+}
+
+.faq-answer ul {
+  padding-left: 20px;
+}
+
+.faq-answer li {
+  margin-bottom: 8px;
+}
+
+/* ACTIVE */
+.faq-item.active .faq-answer {
+  opacity: 1;
+  margin-top: 16px;
+}
+
+.faq-item.active .faq-toggle {
+  opacity: 1;
+  transform: rotate(45deg) scale(1.1);
+}
+
+.faq-item.active .faq-toggle::before {
+  content: "×";
+}
+
+.faq-item.active .faq-question {
+  color: #fff;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.08);
+}
+
+.faq-item.active .faq-question::before {
+  height: 26px;
+  background: #f47c5c;
+  box-shadow: 0 0 12px rgba(244, 124, 92, 0.6);
+}
+
+/* TITLE */
+.faq-title {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 50px;
+  text-align: center;
+
+  letter-spacing: -0.3px;
+  color: #ffffff;
+
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* ================= FOOTER ================= */
+.footer {
+  padding: 80px 40px 60px;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(15, 15, 15, 0.75),
+    rgba(10, 10, 10, 0.9)
+  );
+
+  text-align: center;
+}
+
+.footer-container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* текст */
+.footer-text {
+  font-size: 19px;
+  line-height: 1.75;
+
+  color: rgba(255, 255, 255, 0.85);
+
+  max-width: 640px;
+  margin: 0 auto 24px;
+
+  text-shadow: 0 0 30px rgba(255, 255, 255, 0.05);
+}
+
+/* автор */
+.footer-author {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.45);
+
+  margin-bottom: 60px;
+
+  letter-spacing: 0.3px;
+}
+
+/* ссылки */
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+
+  margin-bottom: 30px;
+}
+
+.footer-links a {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+
+  transition: color 0.25s ease;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+}
+
+/* копирайт */
+/* нижняя часть уходит в тишину */
+.footer-copy {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.3);
+
+  opacity: 0.6;
+}
+
+/* ================= MODAL ================= */
+
+/* ================= MODAL ================= */
+
+.modal {
+  position: fixed;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition: opacity 0.3s ease;
+
+  z-index: 10000;
+}
+
+.modal.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* ===== overlay (исправленный blur) ===== */
+
+.modal-overlay {
+  position: absolute;
+  inset: 0;
+
+  /* blur включен сразу */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  /* но скрыт */
+  background: rgba(0, 0, 0, 0);
+  opacity: 0;
+
+  transition:
+    opacity 0.3s ease,
+    background 0.3s ease;
+}
+
+.modal.active .modal-overlay {
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* ===== окно ===== */
+
+.modal-content {
+  position: relative;
+
+  width: 90%;
+  max-width: 560px;
+  max-height: 75vh;
+
+  overflow-y: auto;
+
+  background: rgba(20, 20, 20, 0.9);
+  backdrop-filter: blur(20px);
+
+  border-radius: 16px;
+
+  box-shadow:
+    0 40px 120px rgba(0, 0, 0, 0.7),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+
+  padding: 32px 28px;
+
+  transform: translateY(20px) scale(0.96);
+  opacity: 0;
+
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.modal.active .modal-content {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+/* ===== close ===== */
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 18px;
+
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.6);
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.modal-close:hover {
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* ===== content ===== */
+
+.modal-body {
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+}
+
+.modal-body h1 {
+  font-size: 32px;
+  margin-bottom: 18px;
+}
+
+.modal-body h2 {
+  font-size: 22px;
+  margin-top: 28px;
+  margin-bottom: 12px;
+}
+
+.modal-body p {
+  margin-bottom: 14px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.modal-body ul {
+  margin-bottom: 18px;
+  padding-left: 20px;
+}
+
+.modal-body li {
+  margin-bottom: 10px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.modal-body strong {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.modal-body .muted {
+  font-size: 14px;
+  opacity: 0.5;
+  margin-bottom: 20px;
+}
+.modal-body h2 + ul {
+  margin-top: 10px;
+}
+
+/* кастомный скролл */
+.modal-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* firefox */
+.modal-content {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+}
+
+/* ================= PAYMENT MODAL ================= */
+
+.pay-modal {
+  position: fixed;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition: opacity 0.3s ease;
+  z-index: 10000;
+}
+
+.pay-modal.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* overlay */
+.pay-overlay {
+  position: absolute;
+  inset: 0;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.3s ease;
+}
+
+.pay-modal.active .pay-overlay {
+  background: rgba(0, 0, 0, 0.65);
+}
+
+/* окно */
+.pay-content {
+  position: relative;
+
+  width: 90%;
+  max-width: 460px;
+
+  background: rgba(20, 20, 20, 0.9);
+  backdrop-filter: blur(20px);
+
+  border-radius: 18px;
+
+  padding: 30px 26px;
+
+  box-shadow:
+    0 40px 120px rgba(0, 0, 0, 0.8),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+
+  color: #fff;
+
+  transform: translateY(20px) scale(0.96);
+  opacity: 0;
+
+  transition: all 0.3s ease;
+}
+
+.pay-modal.active .pay-content {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+/* крест */
+.pay-close {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+
+  font-size: 18px;
+  cursor: pointer;
+  opacity: 0.5;
+  color: #fff;
+}
+
+.pay-close:hover {
+  opacity: 1;
+}
+
+/* заголовок */
+.pay-title {
+  font-size: 18px;
+  margin-bottom: 14px;
+  opacity: 0.8;
+}
+
+/* продукт */
+.pay-product {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  margin-bottom: 16px;
+}
+
+.pay-name {
+  font-weight: 600;
+  font-size: 22px;
+}
+
+.pay-sub {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.pay-desc {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.4);
+  margin-top: 2px;
+}
+
+.pay-price {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+/* линия */
+.pay-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.08);
+  margin: 16px 0;
+}
+
+/* поля */
+.pay-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.pay-field label {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* 🔥 нормальные инпуты */
+.pay-field input {
+  padding: 14px 14px;
+  border-radius: 10px;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
+
+  color: #fff;
+  font-size: 15px;
+
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.pay-field input:focus {
+  border-color: #f47c5c;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* тексты */
+.pay-info {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.4);
+  margin-top: 4px;
+}
+
+.pay-safe {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 8px 0 16px;
+}
+
+/* кнопка */
+.pay-btn {
+  width: 100%;
+
+  padding: 16px;
+  border-radius: 12px;
+  border: none;
+
+  background: #f47c5c;
+  color: #fff;
+
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.pay-btn:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 30px rgba(244, 124, 92, 0.4);
+}
+
+/* низ */
+.pay-note {
+  text-align: center;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.35);
+  margin-top: 10px;
+}

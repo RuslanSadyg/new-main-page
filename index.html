@@ -23,7 +23,7 @@
           <div class="sticky-sub">Начни говорить свободно</div>
         </div>
 
-        <button class="btn primary">Купить 15€</button>
+        <button class="btn primary open-pay">Купить 15€</button>
       </div>
     </div>
 
@@ -49,15 +49,13 @@
           </div>
 
           <div class="buttons">
-            <button class="btn primary big">Купить — 15€</button>
+            <button class="btn primary big open-pay">Купить 15€</button>
             <button class="btn secondary" id="scrollBtn">Подробнее</button>
           </div>
         </div>
       </div>
     </section>
-    <!-- <div class="section-bar">
-      <div class="divider"></div>
-    </div> -->
+
     <!-- ================= TRANSFORM ================= -->
     <section class="transform" id="transform">
       <div class="transform-container">
@@ -163,7 +161,156 @@
         </div>
       </div>
     </section>
+    <div class="divider"></div>
 
+    <!-- ================= FAQ ================= -->
+    <section class="faq">
+      <div class="faq-container">
+        <h2 class="faq-title">Частые вопросы</h2>
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Эта книга для меня?</span>
+            <span class="faq-toggle"></span>
+          </div>
+          <div class="faq-answer">
+            Да, если вы мечтаете говорить на английском свободно и спонтанно.
+            Независимо от вашего текущего уровня — новичок или продвинутый
+            пользователь — я подготовил материал, который подойдёт каждому.
+            <br />
+            Эта книга станет вашим лучшим проводником в мир английского языка.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Что внутри книги?</span>
+            <span class="faq-toggle"></span>
+          </div>
+          <div class="faq-answer">
+            <ul>
+              <li>
+                Подробное объяснение самой эффективной системы для изучения
+                английского, <br />основанной на научных исследованиях.
+              </li>
+
+              <li>
+                Реальные истории из моей жизни, которые делают обучение
+                увлекательным и запоминающимся.
+              </li>
+              <li>
+                Каждая глава — это новый "вау-момент", который не только учит,
+                но и вдохновляет!
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Как я получу книгу?</span>
+            <span class="faq-toggle"></span>
+          </div>
+          <div class="faq-answer">
+            После покупки вы получите книгу на свой электронный адрес в удобном
+            формате, готовую для чтения на любом устройстве или для печати.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Могу ли я купить книгу из своей страны?</span>
+            <span class="faq-toggle"></span>
+          </div>
+          <div class="faq-answer">
+            Да, вы можете приобрести её из любой точки мира и оплатить в любой
+            валюте. Мы сделали процесс максимально удобным для вас.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Есть ли параллельный перевод?</span>
+            <span class="faq-toggle"></span>
+          </div>
+          <div class="faq-answer">Да. Слева английский, справа русский.</div>
+        </div>
+      </div>
+    </section>
+    <div class="divider"></div>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+      <div class="footer-container">
+        <p class="footer-text">
+          С помощью моей книги вы не только узнаете больше о себе и сделаете
+          значительный шаг вперед со своим английским, но и овладеете системой,
+          которая приведет вас к наконец-то выученному английскому языку
+        </p>
+
+        <div class="footer-author">— Luke McCarthy</div>
+
+        <div class="footer-links">
+          <a href="#" id="openContact">Contact</a>
+          <a href="#" id="openTerms">Terms and Conditions</a>
+        </div>
+
+        <div class="footer-copy">© All Rights Reserved. Luke McCarthy</div>
+      </div>
+    </footer>
+
+    <!-- ================= MODAL ================= -->
+    <div class="modal" id="modal">
+      <div class="modal-overlay"></div>
+
+      <div class="modal-content">
+        <div class="modal-close" id="modalClose">✕</div>
+
+        <div class="modal-body" id="modalBody">
+          <!-- сюда будет подставляться контент -->
+        </div>
+      </div>
+    </div>
+    <!-- ================= PAYMENT MODAL ================= -->
+    <div class="pay-modal" id="payModal">
+      <div class="pay-overlay"></div>
+
+      <div class="pay-content">
+        <div class="pay-close" id="payClose">✕</div>
+
+        <div class="pay-body">
+          <h2 class="pay-title">Ваш заказ:</h2>
+
+          <div class="pay-product">
+            <div>
+              <div class="pay-name">YOU and ENGLISH</div>
+              <div class="pay-sub">электронная книга</div>
+              <div class="pay-desc">Лучшее вложение в ваш английский</div>
+            </div>
+            <div class="pay-price">€15</div>
+          </div>
+
+          <div class="pay-divider"></div>
+
+          <div class="pay-field">
+            <label>Имя</label>
+            <input id="payName" type="text" />
+          </div>
+
+          <div class="pay-field">
+            <label>Email</label>
+            <input id="payEmail" type="email" />
+          </div>
+
+          <div class="pay-info">На этот email придёт книга после оплаты</div>
+
+          <div class="pay-safe">Оплатить можно картой любого банка ✅</div>
+
+          <button class="pay-btn">Получить книгу за €15</button>
+
+          <div class="pay-note">🔒 Оплата защищена Stripe</div>
+        </div>
+      </div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
