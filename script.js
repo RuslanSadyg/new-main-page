@@ -173,23 +173,27 @@ openContact.addEventListener("click", (e) => {
   e.preventDefault();
   modalBody.innerHTML = contactHTML;
   modal.classList.add("active");
+  document.body.classList.add("no-scroll");
 });
 
 openTerms.addEventListener("click", (e) => {
   e.preventDefault();
   modalBody.innerHTML = termsHTML;
   modal.classList.add("active");
+  document.body.classList.add("no-scroll");
 });
 
 // ---------- ЗАКРЫТИЕ ----------
 
 modalClose.addEventListener("click", () => {
   modal.classList.remove("active");
+  document.body.classList.remove("no-scroll");
 });
 
 modal.addEventListener("click", (e) => {
   if (e.target.classList.contains("modal-overlay")) {
     modal.classList.remove("active");
+    document.body.classList.remove("no-scroll");
   }
 });
 
@@ -202,17 +206,20 @@ openPayBtns.forEach((btn) => {
   btn.addEventListener("click", (e) => {
     e.preventDefault();
     payModal.classList.add("active");
+    document.body.classList.add("no-scroll");
   });
 });
 
 // закрыть крестом
 payClose.addEventListener("click", () => {
   payModal.classList.remove("active");
+  document.body.classList.remove("no-scroll");
 });
 
 // закрыть по клику вне окна
 payModal.addEventListener("click", (e) => {
   if (e.target.classList.contains("pay-overlay")) {
     payModal.classList.remove("active");
+    document.body.classList.remove("no-scroll");
   }
 });
